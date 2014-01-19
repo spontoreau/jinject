@@ -38,9 +38,8 @@ var Dependency = {
 To define binding use the fluent capability of the API :
 
 ```js
-var ObjectToInspect = function(){
-    var self = this;
-    self.aPropObjectToInspect;
+var ObjectToInspect = {
+    aPropObjectToInspect : '';
 };
 
 var Kernel = require('jinject');
@@ -58,8 +57,8 @@ console.log(obj.aPropObjectToInspect.myAttribute);//write Hello World in the con
 By default jinject inject a dependency when the property to inspect is found. But you can dynamically create a not found property :
 
 ```js
-var ObjectToInspect = function(){
-    var self = this;
+var ObjectToInspect = {
+
 };
 
 var Kernel = require('jinject');
@@ -79,7 +78,7 @@ console.log(obj.aPropObjectToInspect.myAttribute);//write Hello World in the con
 
     - Improve performance
     - Async mode
-    - Capability to resolve object ctor with param
+    - Capability to resolve object define with ctor (actually resolve only inline object... -_-')
     - Capability to resolve function dependencies
 
 
