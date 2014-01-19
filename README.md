@@ -19,13 +19,13 @@ The project is largely inspired by [Ninject](https://github.com/ninject/ninject)
     - Focus on resolving object dependencies.
     - Fluent API for define dependency binding.
     - Scope capability (Transient, Singleton).
-    - Capability to create not found properties in an object.
+    - Capability to create not found properties in an object when resolve dependencies.
 
 
 
 ## Getting start
 
-Actual, the container can only resolve object dependencies.
+Actually, the container can only resolve object dependencies (can't resolve function/constructor).
 You must declare dependencies to inject as inline object :
 
 ```js
@@ -39,7 +39,7 @@ To define binding use the fluent capability of the API :
 
 ```js
 var ObjectToInspect = {
-    aPropObjectToInspect : '';
+    aPropObjectToInspect : {};
 };
 
 var Kernel = require('jinject');
@@ -78,8 +78,8 @@ console.log(obj.aPropObjectToInspect.myAttribute);//write Hello World in the con
 
     - Improve performance
     - Async mode
-    - Capability to resolve object define with ctor (actually resolve only inline object... -_-')
     - Capability to resolve function dependencies
+    - Bind validation of object depend on other object structure (interface/contract like)
 
 
 

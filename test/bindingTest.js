@@ -6,7 +6,7 @@ var Dependency = {
 
 exports.testBind = function(test){
     var expected = 'testName'
-    var bind = new Binding();
+    var bind = Object.create(Binding);
     bind.bind(expected);
 
     var actual = bind.getName();
@@ -15,7 +15,7 @@ exports.testBind = function(test){
 };
 
 exports.testBindFail = function(test){
-    var bind = new Binding();
+    var bind = Object.create(Binding);
     test.throws(function(){
         bind.bind(new Object());
     }, Error);
@@ -24,7 +24,7 @@ exports.testBindFail = function(test){
 
 exports.testSingletonScope = function(test){
     var expected = 'singleton';
-    var bind = new Binding();
+    var bind = Object.create(Binding);
     bind.inSingletonScope();
     var actual = bind.getScope();
     test.equal(expected, actual);
@@ -33,7 +33,7 @@ exports.testSingletonScope = function(test){
 
 exports.testTransientScope = function(test){
     var expected = 'transient';
-    var bind = new Binding();
+    var bind = Object.create(Binding);
     bind.inTransientScope();
     var actual = bind.getScope();
     test.equal(expected, actual);
@@ -41,7 +41,7 @@ exports.testTransientScope = function(test){
 };
 
 exports.testInstance = function(test){
-    var bind = new Binding();
+    var bind = Object.create(Binding);
     bind.to(Dependency);
 
     bind.inSingletonScope();
