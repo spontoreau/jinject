@@ -42,13 +42,9 @@ var ObjectToInspect = {
     aPropObjectToInspect : {};
 };
 
-var Kernel = require('jinject');
-
-var kernel = new Kernel();
+var kernel = require('jinject');
 kernel.bind('aPropObjectToInspect').to(Dependency).inSingletonScope();
-
-var obj = new MyObjectWithThePropToInspect();
-kernel.resolve(obj);
+kernel.resolve(ObjectToInspect);//or use Object.create(ObjectToInspect) if you want to deal with many instances of the type of object
 
 console.log(obj.aPropObjectToInspect.myAttribute);//write Hello World in the console
 ```
@@ -61,13 +57,9 @@ var ObjectToInspect = {
 
 };
 
-var Kernel = require('jinject');
-
-var kernel = new Kernel();
+var kernel = require('jinject');
 kernel.bind('aPropObjectToInspect').to(Dependency).createIfUnknow(true).inSingletonScope();
-
-var obj = new MyObjectWithThePropToInspect();
-kernel.resolve(obj);
+kernel.resolve(ObjectToInspect);//or use Object.create(ObjectToInspect) if you want to deal with many instances of the type of object
 
 console.log(obj.aPropObjectToInspect.myAttribute);//write Hello World in the console
 ```

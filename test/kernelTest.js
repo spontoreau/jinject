@@ -75,3 +75,15 @@ exports.resolveTransient = function(test){
     test.ok(true, obj1.value !== obj2.value);
     test.done();
 };
+
+exports.kernelCache = function(test){
+    var kernel = require('../lib/kernel');
+
+    kernel.bind('value').to(Dependency).inTransientScope();
+
+    var kernel2 = require('../lib/kernel');
+
+    //it's logic that require use cache, but it's just to confirm
+    test.ok(true, kernel.bindings[0] === kernel2.bindings[0]);
+    test.done();
+};
