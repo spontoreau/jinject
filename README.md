@@ -25,8 +25,8 @@ The project is largely inspired by [Ninject](https://github.com/ninject/ninject)
 
 ## Getting start
 
-Actual, the container can only resolve object dependency.
-You must declare dependencies to inject as an inline object :
+Actual, the container can only resolve object dependencies.
+You must declare dependencies to inject as inline object :
 
 ```js
 var Dependency = {
@@ -34,7 +34,8 @@ var Dependency = {
 };
 ```
 
-To define binding use the fluent capability of IoC container :
+
+To define binding use the fluent capability of the API :
 
 ```js
 var ObjectToInspect = function(){
@@ -52,6 +53,7 @@ kernel.resolve(obj);
 
 console.log(obj.aPropObjectToInspect.myAttribute);//write Hello World in the console
 ```
+
 
 By default jinject inject a dependency when the property to inspect is found. But you can dynamically create a not found property :
 
