@@ -2,38 +2,41 @@ jinject
 =======
 
 jinject is an IoC container which focus on resolve object dependencies.
-The project is largely inspired by [Ninject](https://github.com/ninject/ninject)
+The project is largely inspired by [Ninject](https://github.com/ninject/ninject).
 
-The project is actually consider as UNSTABLE !
+**The project is actually consider as UNSTABLE !**
 
 
-### Installation
+
+## Installation
 
     $ npm install jinject
 
 
-### Features
 
-    * Focus on resolving object dependencies.
-    * Fluent API for define dependency binding.
-    * Scope capability (Transient, Singleton).
-    * Capability to create not found properties in an object.
+## Features
+
+    - Focus on resolving object dependencies.
+    - Fluent API for define dependency binding.
+    - Scope capability (Transient, Singleton).
+    - Capability to create not found properties in an object.
 
 
-### Getting start
+
+## Getting start
 
 Actual, the container can only resolve object dependency.
 You must declare dependencies to inject as an inline object :
 
-'''js
+```js
 var Dependency = {
     myAttribute : 'Hello world'
 };
-'''
+```
 
 To define binding use the fluent capability of IoC container :
 
-'''js
+```js
 var ObjectToInspect = function(){
     var self = this;
     self.aPropObjectToInspect;
@@ -48,11 +51,11 @@ var obj = new MyObjectWithThePropToInspect();
 kernel.resolve(obj);
 
 console.log(obj.aPropObjectToInspect.myAttribute);//write Hello World in the console
-'''
+```
 
 By default jinject inject a dependency when the property to inspect is found. But you can dynamically create a not found property :
 
-'''js
+```js
 var ObjectToInspect = function(){
     var self = this;
 };
@@ -66,18 +69,20 @@ var obj = new MyObjectWithThePropToInspect();
 kernel.resolve(obj);
 
 console.log(obj.aPropObjectToInspect.myAttribute);//write Hello World in the console
-'''
+```
 
 
-### RoadMap
 
-    * Improve performance
-    * Async mode
-    * Capability to resolve object ctor with param
-    * Capability to resolve function dependencies
+## RoadMap
+
+    - Improve performance
+    - Async mode
+    - Capability to resolve object ctor with param
+    - Capability to resolve function dependencies
 
 
-### Licence
+
+## Licence
 
 The MIT License (MIT)
 
