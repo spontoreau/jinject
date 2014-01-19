@@ -2,13 +2,12 @@
   "name": "jinject",
   "version": "0.1.0",
   "description" : "jinject is an IoC container which resolve object dependancy. Currently in UNSTABLE status.",
-  "private": "false",
   "keywords" : ["IoC", "Inversion of Control", "DI", "Dependency", "Injection"],
   "homepage" : "https://github.com/Vtek/jinject",
-  "author" :{
-      "name" : "Sylvain PONTOREAU",
+  "author" : {
+      "name" : "vtek",
       "email" : "pontoreau.sylvain@gmail.com",
-      "url" : "http://sylvain.pontoreau.com"
+      "url" : "https://github.com/Vtek"
   },
   "main" : "index",
   "engine" : "node >= 0.8.0",
@@ -24,5 +23,4 @@
       "test-binding" : "nodeunit ./test/bindingTest.js",
       "test-kernel" : "nodeunit ./test/kernelTest.js"
   }
-
 }
