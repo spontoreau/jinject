@@ -9,6 +9,7 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/.gitignorebak" afterPath="$PROJECT_DIR$/.gitignore" />
     </list>
     <ignored path="jinject.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,8 +32,8 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name=".gitignorebak" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignorebak">
+      <file leaf-file-name=".gitignore" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state line="5" column="4" selection-start="46" selection-end="46" vertical-scroll-proportion="0.23006135" vertical-offset="0" max-vertical-offset="326">
               <folding />
@@ -301,7 +302,11 @@
       <created>1390257285143</created>
       <updated>1390257285143</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Removed the .idea folder&#10;">
+      <created>1390257334691</created>
+      <updated>1390257334691</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -353,21 +358,21 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.gitignorebak">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="4" selection-start="46" selection-end="46" vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="165">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignorebak">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="0" selection-start="18" selection-end="18" vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="165">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignorebak">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="0" selection-start="18" selection-end="18" vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="165">
           <folding />
@@ -621,7 +626,7 @@
         <state line="82" column="0" selection-start="2012" selection-end="2012" vertical-scroll-proportion="0.4921875" vertical-offset="1041" max-vertical-offset="1425" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignorebak">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="4" selection-start="46" selection-end="46" vertical-scroll-proportion="0.23006135" vertical-offset="0" max-vertical-offset="326">
           <folding />
