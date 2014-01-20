@@ -1,5 +1,4 @@
 [![Build Status](https://travis-ci.org/Vtek/jinject.png?branch=master)](https://travis-ci.org/Vtek/jinject)  [![NPM version](https://badge.fury.io/js/jinject.png)](http://badge.fury.io/js/jinject)  [![Dependency Status](https://gemnasium.com/Vtek/jinject.png)](https://gemnasium.com/Vtek/jinject)
-
 jinject
 =======
 
@@ -13,7 +12,6 @@ The project is largely inspired by [Ninject](https://github.com/ninject/ninject)
 ## Installation
 
   [![NPM](https://nodei.co/npm/jinject.png?mini=true)](https://nodei.co/npm/jinject/)
-
 
 
 ## Features
