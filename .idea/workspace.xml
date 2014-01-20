@@ -297,7 +297,11 @@
       <created>1390257260506</created>
       <updated>1390257260506</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Removed the .idea folder&#10;">
+      <created>1390257285143</created>
+      <updated>1390257285143</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="ToolWindowManager">
