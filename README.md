@@ -1,7 +1,7 @@
-jinject
+jinject  [![Build Status](https://travis-ci.org/Vtek/jinject.png?branch=master)](https://travis-ci.org/Vtek/jinject)  [![NPM version](https://badge.fury.io/js/jinject.png)](http://badge.fury.io/js/jinject)  [![Dependency Status](https://gemnasium.com/Vtek/jinject.png)](https://gemnasium.com/Vtek/jinject)
 =======
 
-jinject is an IoC container which focus on resolve object dependencies.
+jinject is an IoC container for [node](http://nodejs.org) which focus on resolve object dependencies.
 The project is largely inspired by [Ninject](https://github.com/ninject/ninject).
 
 **The project is actually consider as UNSTABLE !**
@@ -10,16 +10,17 @@ The project is largely inspired by [Ninject](https://github.com/ninject/ninject)
 
 ## Installation
 
-    $ npm install jinject
+  [![NPM](https://nodei.co/npm/jinject.png?mini=true)](https://nodei.co/npm/jinject/)
 
 
 
 ## Features
 
-    - Focus on resolving object dependencies.
-    - Fluent API for define dependency binding.
-    - Scope capability (Transient, Singleton).
-    - Capability to create not found properties in an object when resolve dependencies.
+  * Focus on resolving object dependencies.
+  * Fluent API for define dependency binding.
+  * Scope capability (Transient, Singleton).
+  * Capability to create not found properties in an object when resolve dependencies.
+  * No package dependencies
 
 
 
@@ -68,10 +69,10 @@ console.log(obj.aPropObjectToInspect.myAttribute);//write Hello World in the con
 
 ## RoadMap
 
-    - Improve performance
-    - Async mode
-    - Capability to resolve function dependencies
-    - Bind validation of object depend on other object structure (interface/contract like)
+  * Improve performance
+  * Async mode
+  * Capability to resolve function dependencies
+  * Bind validation of object depend on other object structure (interface/contract like)
 
 
 
