@@ -1,4 +1,6 @@
-jinject  [![Build Status](https://travis-ci.org/Vtek/jinject.png?branch=master)](https://travis-ci.org/Vtek/jinject)  [![NPM version](https://badge.fury.io/js/jinject.png)](http://badge.fury.io/js/jinject)  [![Dependency Status](https://gemnasium.com/Vtek/jinject.png)](https://gemnasium.com/Vtek/jinject)
+[![Build Status](https://travis-ci.org/Vtek/jinject.png?branch=master)](https://travis-ci.org/Vtek/jinject)  [![NPM version](https://badge.fury.io/js/jinject.png)](http://badge.fury.io/js/jinject)  [![Dependency Status](https://gemnasium.com/Vtek/jinject.png)](https://gemnasium.com/Vtek/jinject)
+
+jinject
 =======
 
 jinject is an IoC container for [node](http://nodejs.org) which focus on resolve object dependencies.
