@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="86b27075-4d73-47a3-95b3-d7f3cef23e74" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/jinject.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.gitignorebak" afterPath="$PROJECT_DIR$/.gitignore" />
     </list>
     <ignored path="jinject.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -306,7 +299,11 @@
       <created>1390257334691</created>
       <updated>1390257334691</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Removed the .idea folder&#10;">
+      <created>1390257408236</created>
+      <updated>1390257408236</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="ToolWindowManager">
