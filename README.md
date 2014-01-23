@@ -17,6 +17,7 @@ The project is largely inspired by [Ninject](https://github.com/ninject/ninject)
 ## Features
 
   * Focus on resolving object dependencies.
+  * Can resolve inline object and function.
   * Fluent API for define dependency binding.
   * Scope capability (Transient, Singleton).
   * Capability to create not found properties in an object when resolve dependencies.
@@ -26,12 +27,17 @@ The project is largely inspired by [Ninject](https://github.com/ninject/ninject)
 
 ## Getting start
 
-Actually, the container can only resolve object dependencies (can't resolve function/constructor).
-You must declare dependencies to inject as inline object :
+The container resolve object dependencies.
+You can declare dependencies to inject as inline object or function :
 
 ```js
 var Dependency = {
     myAttribute : 'Hello world'
+};
+
+var FunctionDependency = function(){
+    var self = this;
+    self.myAttribute = 'Hello world';
 };
 ```
 
@@ -71,7 +77,6 @@ console.log(obj.aPropObjectToInspect.myAttribute);//write Hello World in the con
 
   * Improve performance
   * Async mode
-  * Capability to resolve function dependencies
   * Bind validation of object depend on other object structure (interface/contract like)
 
 

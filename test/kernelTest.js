@@ -12,9 +12,14 @@ var Dependency = {
     test : 'test'
 };
 
-exports.resolveTest = function(test){
+var FunctionDependency = function(){
+    var self = this;
+    self.test = 'test';
+}
+
+exports.resolveObjectTest = function(test){
     var expected = 'test';
-    var kernel = Object.create(Kernel);
+    var kernel = require('../lib/kernel');
 
     kernel.bind('value').to(Dependency).inSingletonScope();
 
@@ -31,9 +36,28 @@ exports.resolveTest = function(test){
     test.done();
 };
 
+exports.resolveFunctionTest = function(test){
+    var expected = 'test';
+    var kernel = require('../lib/kernel');
+
+    kernel.bind('value').to(FunctionDependency).inSingletonScope();
+
+    var objWith = Object.create(ObjectWithProperty);
+    kernel.resolve(objWith);
+    var actual = objWith.value.test;
+
+    var objWithout = Object.create(ObjectWithoutProperty);
+    kernel.resolve(objWithout);
+
+    test.ok(true, typeof objWith.value == 'FunctionDependency');
+    test.equal(expected, actual);
+    test.ok(true, objWithout.value == undefined);
+    test.done();
+};
+
 exports.resolveWithCreateTest = function(test){
     var expected = 'test';
-    var kernel = Object.create(Kernel);
+    var kernel = require('../lib/kernel');
 
     kernel.bind('value').to(Dependency).create(true).inTransientScope();
 
@@ -47,7 +71,7 @@ exports.resolveWithCreateTest = function(test){
 };
 
 exports.resolveSingleton = function(test){
-    var kernel = Object.create(Kernel);
+    var kernel = require('../lib/kernel');
 
     kernel.bind('value').to(Dependency).inSingletonScope();
 
@@ -62,7 +86,7 @@ exports.resolveSingleton = function(test){
 };
 
 exports.resolveTransient = function(test){
-    var kernel = Object.create(Kernel);
+    var kernel = require('../lib/kernel');
 
     kernel.bind('value').to(Dependency).inTransientScope();
 
