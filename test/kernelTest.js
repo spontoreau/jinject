@@ -35,7 +35,7 @@ exports.resolveWithCreateTest = function(test){
     var expected = 'test';
     var kernel = Object.create(Kernel);
 
-    kernel.bind('value').to(Dependency).createIfUnknow(true).inTransientScope();
+    kernel.bind('value').to(Dependency).create(true).inTransientScope();
 
     var objWithout = Object.create(ObjectWithoutProperty);
     kernel.resolve(objWithout);

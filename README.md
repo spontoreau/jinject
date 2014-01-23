@@ -59,7 +59,7 @@ var ObjectToInspect = {
 };
 
 var kernel = require('jinject');
-kernel.bind('aPropObjectToInspect').to(Dependency).createIfUnknow(true).inSingletonScope();
+kernel.bind('aPropObjectToInspect').to(Dependency).create(true).inSingletonScope();
 kernel.resolve(ObjectToInspect);//or use Object.create(ObjectToInspect) if you want to deal with many instances of the type of object
 
 console.log(obj.aPropObjectToInspect.myAttribute);//write Hello World in the console
