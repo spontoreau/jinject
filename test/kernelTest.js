@@ -36,6 +36,22 @@ exports.resolveObjectTest = function(test){
     test.done();
 };
 
+//TODO async unit test
+/**exports.resolveObjectAsyncTest = function(test){
+    var expected = 'test';
+    var kernel = require('../lib/kernel');
+
+    kernel.bind('value').to(Dependency).inSingletonScope();
+
+    var objWith = Object.create(ObjectWithProperty);
+    kernel.resolveAsync(objWith, function(){
+        var actual = objWith.value.test;
+
+        test.ok(true, typeof objWith.value == 'Dependency');
+        test.equal(expected, actual);
+    });
+};**/
+
 exports.resolveFunctionTest = function(test){
     var expected = 'test';
     var kernel = require('../lib/kernel');

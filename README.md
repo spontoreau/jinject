@@ -18,6 +18,7 @@ The project is largely inspired by [Ninject](https://github.com/ninject/ninject)
 
   * Focus on resolving object dependencies.
   * Can resolve inline object and function.
+  * Asynchronous resolving (Unstable / Not test)
   * Fluent API for define dependency binding.
   * Scope capability (Transient, Singleton).
   * Capability to create not found properties in an object when resolve dependencies.
@@ -67,10 +68,19 @@ kernel.resolve(ObjectToInspect);//or use Object.create(ObjectToInspect) if you w
 console.log(obj.aPropObjectToInspect.myAttribute);//write Hello World in the console
 ```
 
+Kernel can resolve dependencies asynchronous (Unstable / Not test) :
+
+```js
+kernel.resolveAsync(objWith, function(){
+    //do some work here
+};
+```
+
+
 ## RoadMap
 
   * Improve performance
-  * Async mode
+  * Unit test for asynchronous resolving
   * Bind validation of object depend on other object structure (interface/contract like)
 
 
