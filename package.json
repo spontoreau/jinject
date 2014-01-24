@@ -1,7 +1,7 @@
 {
   "name": "jinject",
   "version": "0.1.3",
-  "description" : "jinject is an IoC container for node.js which resolve object dependancies. Currently in UNSTABLE status.",
+  "description" : "jinject is an IoC container for node.js which resolve object dependancies.",
   "keywords" : ["IoC", "Inversion of Control", "DI", "Dependency", "Injection"],
   "homepage" : "https://github.com/Vtek/jinject",
   "author" : {

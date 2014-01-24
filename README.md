@@ -51,18 +51,13 @@ var ObjectToInspect = {
 
 var kernel = require('jinject');
 kernel.bind('aPropObjectToInspect').to(Dependency).inSingletonScope();
-kernel.resolve(ObjectToInspect);//or use Object.create(ObjectToInspect) if you want to deal with many instances of the type of object
-
-console.log(obj.aPropObjectToInspect.myAttribute);//write Hello World in the console
 ```
 
 
 By default jinject inject a dependency when the property to inspect is found. But you can dynamically create a not found property :
 
 ```js
-var ObjectToInspect = {
-
-};
+var ObjectToInspect = {};
 
 var kernel = require('jinject');
 kernel.bind('aPropObjectToInspect').to(Dependency).create(true).inSingletonScope();
@@ -71,7 +66,12 @@ kernel.resolve(ObjectToInspect);//or use Object.create(ObjectToInspect) if you w
 console.log(obj.aPropObjectToInspect.myAttribute);//write Hello World in the console
 ```
 
+When bindings are define, call the kernel to resolve dependencies :
 
+```js
+kernel.resolve(ObjectToInspect);//or use Object.create(ObjectToInspect) if you want to deal with many instances of the type of object
+console.log(obj.aPropObjectToInspect.myAttribute);//write Hello World in the console
+```
 
 ## RoadMap
 
