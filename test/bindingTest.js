@@ -1,7 +1,7 @@
 var Binding = require('../lib/binding');
 
 var Dependency = {
-
+    text : 'test'
 };
 
 exports.testBind = function(test){
@@ -19,6 +19,35 @@ exports.testBindFail = function(test){
     test.throws(function(){
         bind.bind(new Object());
     }, Error);
+    test.done();
+};
+
+exports.testValidate = function(test){
+    var bind = Object.create(Binding);
+
+    //test1 binding haven't dependency it's false.
+    test.equals(false, bind.isValid());
+
+    //test2 binding haven't contract but a dependency
+    bind.to(Dependency);
+    test.equals(true, bind.isValid());
+
+    //test3 binding has contract and it's invalid
+    var InvalidContract = {
+        text : 'number'
+    };
+
+    bind.validate(InvalidContract);
+    test.equals(false, bind.isValid());
+
+    //test4 binding has contract and it's valid
+    var ValidContract = {
+        text : 'string'
+    };
+
+    bind.validate(ValidContract);
+    test.equals(true, bind.isValid());
+
     test.done();
 };
 

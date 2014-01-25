@@ -5,8 +5,6 @@ jinject
 jinject is an IoC container for [node](http://nodejs.org) which focus on resolve object dependencies.
 The project is largely inspired by [Ninject](https://github.com/ninject/ninject).
 
-**The project is actually consider as UNSTABLE !**
-
 
 
 ## Installation
@@ -21,6 +19,7 @@ The project is largely inspired by [Ninject](https://github.com/ninject/ninject)
   * Asynchronous resolving (Unstable / Not test)
   * Fluent API for define dependency binding.
   * Scope capability (Transient, Singleton).
+  * Bind validation of object depend on other object structure (interface/contract like)
   * Capability to create not found properties in an object when resolve dependencies.
   * No package dependencies
 
@@ -61,27 +60,57 @@ By default jinject inject a dependency when the property to inspect is found. Bu
 kernel.bind('aPropObjectToInspect').to(Dependency).create(true).inSingletonScope();
 ```
 
+Binding can have contract on dependency. To do this, your need to define an inline object which contains keys / values structure.
+Keys are property name and values are types corresponding of the properties to inspect :
+
+```js
+var Contract = {
+    myProp : "string"
+};
+```
+
+Kernel call binding method "isValid" to check the structure of an object. This method is public, you can invoke it like this :
+
+```js
+var ValidDependency = {
+    myProp : 'this is a valid type :)'
+};
+
+var InvalidDependency = {
+    myProp : function(){
+        return 'Will fail because of invalid type !';
+    }
+};
+
+var kernel = require('jinject');
+var isValid = kernel.bind('myProp').to(ValidDependency).validate(Contract).isValid();
+console.log(isValid); //print true
+
+isValid = kernel.bind('myProp').to(InvalidDependency).validate(Contract).isValid();
+console.log(isValid); //print false
+```
+
 When bindings are define, call the kernel to resolve dependencies :
 
 ```js
 kernel.resolve(ObjectToInspect);//or use Object.create(ObjectToInspect) if you want to deal with many instances of the type of object
-console.log(obj.aPropObjectToInspect.myAttribute);//write Hello World in the console
+console.log(obj.aPropObjectToInspect.myAttribute);//print Hello World in the console
 ```
 
 Kernel can resolve dependencies asynchronous (Unstable / Not test) :
 
 ```js
 kernel.resolveAsync(objWith, function(){
-    //do some work here
+    console.log(obj.aPropObjectToInspect.myAttribute);//print Hello World in the console
 };
 ```
 
+If dependency is invalid due to a contract, kernel will throw an Error.
 
 ## RoadMap
 
   * Improve performance
   * Unit test for asynchronous resolving
-  * Bind validation of object depend on other object structure (interface/contract like)
 
 
 
