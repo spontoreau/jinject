@@ -16,7 +16,7 @@
       "url" : "https://github.com/Vtek/jinject.git"
   },
   "devDependencies" : {
-      "nodeunit" : "0.8.3"
+      "nodeunit" : "0.8.4"
   },
   "scripts" : {
       "test" : "npm run test-binding && npm run test-kernel && npm run test-benchmark",
