@@ -9,8 +9,9 @@ The project is largely inspired by [Ninject](https://github.com/ninject/ninject)
 
 ## Installation
 
-  [![NPM](https://nodei.co/npm/jinject.png?mini=true)](https://nodei.co/npm/jinject/)
-
+```
+$ npm install jinject
+```
 
 ## Features
 
