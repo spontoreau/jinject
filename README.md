@@ -111,6 +111,8 @@ If dependency is invalid due to a contract, kernel will throw an Error.
 
   * Improve performance
   * Unit test for asynchronous resolving
+  * Add a service locator function.
+  * Don't allow multiple binding on same dependency / property.
 
 
 
